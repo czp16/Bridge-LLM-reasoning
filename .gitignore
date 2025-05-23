@@ -3,6 +3,7 @@ model/
 checkpoints/
 wandb/
 tmp/
+outputs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
