@@ -58,21 +58,18 @@ We suppose the experiment is run on a 2xA100(80G) server. Run experiments (SFT +
 ```
 experiment/run_qwen2.5-1.5B-igsm.sh
 ```
-You can use other scripts to run with other models.
+You can use other scripts to run with other models. It includes two parts:
+1. SFT training.
+    The model will be saved to [model/sft](model/sft) dir. Remember to modify training data path if you use another one.
+2. RL training.
+    The model will be saved to [checkpoints/{project_name}](checkpoints) dir. You may need to convert the `.pt` files to `.safetensors` when using vllm for inference or pushing it to Huggingface.
 
-- Run SFT.
-    Run `experiment/run_qwen2.5-1.5B-igsm-sft.sh` to start SFT. The model will be saved to [model/sft](model/sft) dir. Remember to modify training data path if you use another one.
+You can also 
+- modify batch_size like `xxx_batch_size_per_gpu` according to the memory usage.
+- decrease `gpu_memory_utilization` if GPU memory is not enough.
+- offload parameter / optimizer if GPU memory is still not enough, but it will significantly slow down the experiment.
+- un-comment `export VLLM_ATTENTION_BACKEND=XFORMERS` at the beginning of the script if you encounter vllm bugs on V1 engine, then we will use engine V0 for inference.
 
-- Then you can run `experiment/run_qwen2.5-1.5B-igsm.sh` to start GRPO training. But you need to modify
-    - training / test data path if you use another one.
-    - sft model path.
-
-  You can also modify
-    - batch_size like `xxx_batch_size_per_gpu` according to the memory usage.
-    - increase `gpu_memory_utilization` if on A100.
-    - set `enforce_eager` and `free_cache_engine` to be false if memory allows. It will accelerate vllm inference by ~20%.
-    - remove `export VLLM_ATTENTION_BACKEND=XFORMERS` at the beginning of the script if it works, then we will use engine V1 for inference.
-
-## How to get the evaluation generation
-Currently, we manually run vllm inference from the checkpoints, will consider update it later. 
-See [simple_verl/scripts/evaluation/readme.md](simple_verl/scripts/evaluation/readme.md) for instructions.
+## Evaluation
+Currently, we manually run vllm inference from the checkpoints. 
+See [evaluation readme.md](simple_verl/scripts/evaluation/readme.md) for instructions.
