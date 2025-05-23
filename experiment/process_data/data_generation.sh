@@ -67,3 +67,17 @@ python iGSM-reasoning/scripts/generate_dataset.py \
     --data_type=${data_type} \
     --save_dir=${save_dir} \
     --max_solution=${max_solution}
+
+# data_type="test"
+# dataset_size=500
+# min_op=25
+# max_op=25
+
+# python iGSM-reasoning/scripts/generate_dataset.py \
+#     --force \
+#     --max_operations=${max_op} \
+#     --min_operations=${min_op} \
+#     --dataset_size=${dataset_size} \
+#     --data_type=${data_type} \
+#     --save_dir=${save_dir}
+#     --max_solution=${max_solution}

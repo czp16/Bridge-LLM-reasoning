@@ -118,7 +118,7 @@ def main(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default="/home/zcen/project/data/parquet_files/iGSM")
+    parser.add_argument("--data_dir", type=str, default="data/parquet_files/iGSM")
     parser.add_argument(
         '--data_name_list',
         nargs='+',
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     )
     
     parser.add_argument("--model_dir", type=str, default="")
-    parser.add_argument("--save_dir", type=str, default="generated_response_0513")
+    parser.add_argument("--save_dir", type=str, default="generated_response")
     parser.add_argument("--num_n", type=int, default=1)  # number of N for each question
     parser.add_argument("--temperature", type=float, default=0)
     parser.add_argument("--gpu_memory_utilization", type=float, default=0.85)
