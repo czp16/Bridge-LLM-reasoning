@@ -74,10 +74,10 @@ We can inject behaviors to the answers to prepare the trained LLM for reinforcem
 -   - Then, let's denote the number of each Oakwood Middle School's Classroom as v. Then v = m + Q + W = 13 + 5 + 6 = 24.
 +   - Then, let's denote the number of each Oakwood Middle School's Classroom as v. Then v = m + Q + W = 13 + 5 + 6 = 18 + 6 = 24.
     ...
-+   Then, let's denote the number of each Graphic Design Studio's Manager Backpack as y. But we haven't calculated the number of each Rising Stars Junior High's Classroom yet, thus the value of y is still unknown.
++   - Then, let's denote the number of each Graphic Design Studio's Manager Backpack as y. But we haven't calculated the number of each Rising Stars Junior High's Classroom yet, thus the value of y is still unknown.
     ...
--   Next, let y represent the number of each Graphic Design Studio's Manager Backpack. Then y = p - v = 48 - 24 = 24.
-+   Now, we can find the number of each Graphic Design Studio's Manager Backpack. Remember that it has been denoted as y. We know that it equals the difference of each Rising Stars Junior High's Classroom and each Oakwood Middle School's Classroom. Then y = p - v = 48 - 24 = 24.
+-   - Next, let y represent the number of each Graphic Design Studio's Manager Backpack. Then y = p - v = 48 - 24 = 24.
++   - Now, we can find the number of each Graphic Design Studio's Manager Backpack. Remember that it has been denoted as y. We know that it equals the difference of each Rising Stars Junior High's Classroom and each Oakwood Middle School's Classroom. Then y = p - v = 48 - 24 = 24.
     Thus, the answer is 24.
 ```
 The new behaviors correspond to *subgoal computation*, *reflection* and *information analysis*.
