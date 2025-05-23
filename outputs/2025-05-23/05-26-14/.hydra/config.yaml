@@ -1,0 +1,46 @@
+data:
+  train_batch_size: 128
+  micro_batch_size_per_gpu: 4
+  train_files: data/parquet_files/iGSM/SFT_2K_CoT_op_15-20_no_detailed_reflect_0.0_analysis_0.parquet
+  text_key: message
+  max_length: 2048
+  truncation: error
+  balance_dp_token: false
+  chat_template: null
+model:
+  path: Qwen/Qwen2.5-1.5B
+  fsdp_config:
+    wrap_policy:
+      min_num_params: 0
+    cpu_offload: false
+    offload_params: false
+  external_lib: null
+  enable_gradient_checkpointing: true
+  trust_remote_code: false
+  lora_rank: 0
+  lora_alpha: 16
+  target_modules: all-linear
+  use_liger: false
+optim:
+  lr: 5.0e-06
+  betas:
+  - 0.9
+  - 0.95
+  weight_decay: 0.01
+  warmup_steps_ratio: 0.1
+  clip_grad: 1.0
+  lr_scheduler: constant
+ulysses_sequence_parallel_size: 1
+use_remove_padding: false
+trainer:
+  default_local_dir: model/sft/qwen-1.5B-SFT_2K_CoT_op_15-20_no_detailed_reflect_0.0_analysis_0
+  default_hdfs_dir: null
+  resume_path: null
+  project_name: Bridge-iGSM-SFT
+  experiment_name: qwen-1.5B-5epoch_SFT_2K_CoT_op_15-20_no_detailed_reflect_0.0_analysis_0
+  total_epochs: 5
+  total_training_steps: null
+  logger:
+  - console
+  - wandb
+  seed: 1
