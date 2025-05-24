@@ -1,4 +1,18 @@
-# BRIDGE
+<br>
+<p align="center">
+<h1 align="center"><img align="center">
+<strong>Behavior Injection: Preparing Language Models for Reinforcement Learning
+</strong>
+</h1>
+</p>
+
+## Overview
+This repo provides an official implementation of *Behavior Injection: Preparing Language Models for Reinforcement Learning*. In this paper, we propose to inject *exploration* and *exploitation* behaviors to prepare LLM for reinforcement learning finetuning.
+
+<p align="center">
+    <img src="assets/Overview.png" alt="framework" width=85% >
+</p>
+
 ## Installation
 1. We use Anaconda or Miniconda to manage python environment.
 2. Create conda env,
