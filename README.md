@@ -7,7 +7,7 @@
 </p>
 
 ## Overview
-This repo provides an official implementation of *Behavior Injection: Preparing Language Models for Reinforcement Learning*. In this paper, we propose to inject *exploration* and *exploitation* behaviors to prepare LLM for reinforcement learning finetuning.
+This repo provides an official implementation of *Behavior Injection: Preparing Language Models for Reinforcement Learning*. In this paper, we analyze the training per-step influence in RL finetuning and identify two key factors: (1) rollout accuracy, and (2) data co-influence, which quantifies how much the training data affects performance on other samples. We then propose to inject *exploration* and *exploitation* behaviors to prepare LLM for reinforcement learning finetuning.
 
 <p align="center">
     <img src="assets/Overview.png" alt="framework" width=85% >
