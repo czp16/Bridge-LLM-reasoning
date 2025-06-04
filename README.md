@@ -1,9 +1,19 @@
 <br>
 <p align="center">
 <h1 align="center"><img align="center">
-<strong>Behavior Injection: Preparing Language Models for Reinforcement Learning
+<strong><img src="assets/bridge.jpg" alt="framework" height=25 >Behavior Injection: Preparing Language Models for Reinforcement Learning
 </strong>
 </h1>
+</p>
+
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2505.18917" target='_blank'>
+    <img src="https://img.shields.io/badge/arXiv-2505.18917-red">
+  </a>
+  <a href="https://bridge-llm-reasoning.github.io" target='_blank'>
+    <img src="https://img.shields.io/badge/Website-BRIDGE-blue">
+  </a>
 </p>
 
 ## Overview
