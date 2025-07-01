@@ -7,14 +7,11 @@
 </p>
 
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2505.18917" target='_blank'>
-    <img src="https://img.shields.io/badge/arXiv-2505.18917-red">
-  </a>
-  <a href="https://bridge-llm-reasoning.github.io" target='_blank'>
-    <img src="https://img.shields.io/badge/Website-BRIDGE-blue">
-  </a>
-</p>
+<div align="center">
+
+[![arXiv](https://img.shields.io/badge/arXiv-2505.18917-red?style=for-the-badge&.svg)](https://arxiv.org/abs/2505.18917)
+[![](https://img.shields.io/badge/Website-BRIDGE-blue?style=for-the-badge&logo=website&logoColor=white)](https://bridge-llm-reasoning.github.io)
+</div>
 
 ## Overview
 This repo provides an official implementation of *Behavior Injection: Preparing Language Models for Reinforcement Learning*. In this paper, we analyze the training per-step influence in RL finetuning and identify two key factors: (1) rollout accuracy, and (2) data co-influence, which quantifies how much the training data affects performance on other samples. We then propose to inject *exploration* and *exploitation* behaviors to prepare LLM for reinforcement learning finetuning.
